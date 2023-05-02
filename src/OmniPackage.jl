@@ -14,7 +14,6 @@ using AbstractMCMC,
   DataStructures,
   DiffEqBase,
   DiffResults,
-  DiffEqFlux,
   DifferentialEquations,
   DistributedArrays,
   Distributions,
@@ -25,7 +24,6 @@ using AbstractMCMC,
   FFTW,
   FillArrays,
   FiniteDiff,
-  Flux,
   ForwardDiff,
   GLM,
   GlobalSensitivity,
@@ -47,7 +45,6 @@ using AbstractMCMC,
   MCMCDiagnosticTools,
   MLJ,
   MLJBase,
-  MLJFlux,
   MLJXGBoostInterface,
   MacroTools,
   Missings,
@@ -95,8 +92,14 @@ using AbstractMCMC,
   Tullio,
   Unitful,
   UnicodePlots,
-  VectorizedRNG
+  VectorizedRNG,
+  Test
+# broken on master
+# using SciMLSensitivity, DiffEqFlux, Zygote, Flux, MLJFlux
 
+export create_array_of_ps
+
+include("parametric_struct.jl")
 include("expm.jl")
 include("ordinarydiffeq.jl")
 
