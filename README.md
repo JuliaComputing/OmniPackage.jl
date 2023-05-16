@@ -6,6 +6,57 @@
 The purpose of this package is to be big, to answer the question "what happens if we load a huge chunk of the open source ecosytem at the same time?"
 In the future, it may be worth additionally adding code snippets making use of these open repositories.
 
+Great example:
+```julia
+@time using OmniPackage, Test
+x = create_array_of_ps()
+@testset "Compiling in a TestSet makes this slow" begin
+  @test x[1] isa Vector{OmniPackage.ParametricStruct{Float64,Float64,Float64,Float64,Float64,Float64,Int}}
+end
+# even in a fresh session, this is fast
+@time @eval x[1] isa Vector{OmniPackage.ParametricStruct{Float64,Float64,Float64,Float64,Float64,Float64,Int}}
+versioninfo()
+```
+Sample result:
+```julia
+julia> @time using OmniPackage, Test
+ 29.925019 seconds (37.83 M allocations: 2.529 GiB, 3.58% gc time, 70.85% compilation time: 49% of which was recompilation)
+
+julia> x = create_array_of_ps()
+2-element Vector{Vector{OmniPackage.ParametricStruct{Float64, Float64, Float64, Float64, Float64, Float64, Int64}}}:
+ [OmniPackage.ParametricStruct{Float64, Float64, Float64, Float64, Float64, Float64, Int64}(1.0, 2.0, 3, 4.0, 5.0, 6.0, 7.0, OmniPackage.apple, 1, 2), OmniPackage.ParametricStruct{Float64, Float64, Float64, Float64, Float64, Float64, Int64}(1.0, 2.0, 3, 4.0, 5.0, 6.0, 7.0, OmniPackage.apple, 1, 2)]
+ [OmniPackage.ParametricStruct{Float64, Float64, Float64, Float64, Float64, Float64, Int64}(1.0, 2.0, 3, 4.0, 5.0, 6.0, 7.0, OmniPackage.apple, 1, 2), OmniPackage.ParametricStruct{Float64, Float64, Float64, Float64, Float64, Float64, Int64}(1.0, 2.0, 3, 4.0, 5.0, 6.0, 7.0, OmniPackage.apple, 1, 2)]
+
+julia> @testset "Compiling in a TestSet makes this slow" begin
+         @test x[1] isa Vector{OmniPackage.ParametricStruct{Float64,Float64,Float64,Float64,Float64,Float64,Int}}
+       end
+Test Summary:                          | Pass  Total   Time
+Compiling in a TestSet makes this slow |    1      1  14.7s
+Test.DefaultTestSet("Compiling in a TestSet makes this slow", Any[], 1, false, false, true, 1.683043618670673e9, 1.683043633367204e9, false)
+
+julia> # even in a fresh session, this is fast
+       @time @eval x[1] isa Vector{OmniPackage.ParametricStruct{Float64,Float64,Float64,Float64,Float64,Float64,Int}}   
+  0.000217 seconds (68 allocations: 3.719 KiB)
+true
+
+julia> versioninfo()
+Julia Version 1.10.0-DEV.1159
+Commit 1a973c7a7a (2023-05-02 03:46 UTC)
+Platform Info:
+  OS: Linux (x86_64-generic-linux)
+  CPU: 28 × Intel(R) Core(TM) i9-9940X CPU @ 3.30GHz
+  WORD_SIZE: 64
+  LIBM: libopenlibm
+  LLVM: libLLVM-14.0.6 (ORCJIT, skylake-avx512)
+  Threads: 41 on 28 virtual cores
+Environment:
+  JULIA_PATH = @.
+  LD_LIBRARY_PATH = /usr/local/lib/
+  JULIA_NUM_THREADS = 28
+```
+The compile time seems far too high for such a trivial function.
+
+
 The examples can be made better:
 ```julia
 julia> @time using OmniPackage
