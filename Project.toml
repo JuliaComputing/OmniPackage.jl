@@ -198,6 +198,7 @@ Tullio = "0.3"
 UnicodePlots = "3"
 Unitful = "1.0"
 VectorizedRNG = "0.2.16"
+Zygote = "0.6"
 julia = "1.6"
 
 [extras]
