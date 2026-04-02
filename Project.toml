@@ -1,7 +1,7 @@
 name = "OmniPackage"
 uuid = "992a9bcd-042f-40bc-a011-a3ea62fdd9b8"
-authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 version = "0.1.4"
+authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 
 [deps]
 AbstractMCMC = "80f14c24-f653-4e6a-9b94-39d6b0f70001"
@@ -170,7 +170,7 @@ ProgressMeter = "1.4"
 ProvenanceBase = "0.2"
 QuantileRegressions = "0.1.10"
 ReadStatTables = "0.2"
-RecursiveArrayTools = "= 2.36.0"
+RecursiveArrayTools = "= 2.36.0, 4"
 RecursiveTupleMath = "0.1"
 Reexport = "1.0"
 RelocatableFolders = "1"
