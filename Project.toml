@@ -1,7 +1,7 @@
 name = "OmniPackage"
 uuid = "992a9bcd-042f-40bc-a011-a3ea62fdd9b8"
-authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 version = "0.1.4"
+authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 
 [deps]
 AbstractMCMC = "80f14c24-f653-4e6a-9b94-39d6b0f70001"
@@ -114,7 +114,7 @@ AdvancedHMC = "0.3"
 BenchmarkTools = "1"
 CSTParser = "3"
 CSV = "0.10"
-CUDA = "4"
+CUDA = "4, 6"
 Catalyst = "= 12.3.1"
 Colors = "0.12"
 DataDrivenDiffEq = "1"
