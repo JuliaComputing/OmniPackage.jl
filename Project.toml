@@ -1,7 +1,7 @@
 name = "OmniPackage"
 uuid = "992a9bcd-042f-40bc-a011-a3ea62fdd9b8"
-authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 version = "0.1.4"
+authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 
 [deps]
 AbstractMCMC = "80f14c24-f653-4e6a-9b94-39d6b0f70001"
@@ -143,7 +143,7 @@ JumpProcesses = "9"
 KernelDensity = "0.6"
 LabelledArrays = "1.7.1"
 Latexify = "0.15.13, 0.16"
-LinearSolve = "1"
+LinearSolve = "1, 5"
 Loess = "0.5.3, 0.6"
 Lux = "0.4"
 MCMCChains = "5.0, 6"
