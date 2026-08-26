@@ -1,7 +1,7 @@
 name = "OmniPackage"
 uuid = "992a9bcd-042f-40bc-a011-a3ea62fdd9b8"
-authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 version = "0.1.4"
+authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 
 [deps]
 AbstractMCMC = "80f14c24-f653-4e6a-9b94-39d6b0f70001"
@@ -178,7 +178,7 @@ Revise = "3"
 Roots = "< 1.4.1"
 SciMLBase = "= 1.91.7"
 Setfield = "1"
-SimpleChains = "0.4"
+SimpleChains = "0.4, 0.5"
 SpecialFunctions = "2"
 StableRNGs = "1"
 Static = "0.7, 0.8"
