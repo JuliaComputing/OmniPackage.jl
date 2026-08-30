@@ -1,7 +1,7 @@
 name = "OmniPackage"
 uuid = "992a9bcd-042f-40bc-a011-a3ea62fdd9b8"
-authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 version = "0.1.4"
+authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 
 [deps]
 AbstractMCMC = "80f14c24-f653-4e6a-9b94-39d6b0f70001"
@@ -119,7 +119,7 @@ Catalyst = "= 12.3.1"
 Colors = "0.12"
 DataDrivenDiffEq = "1"
 DataFrames = "1.4"
-DataInterpolations = "3.0, 4"
+DataInterpolations = "3.0, 4, 10"
 DataStructures = "0.18"
 DiffEqBase = "= 6.120.0"
 DiffResults = "1.0"
