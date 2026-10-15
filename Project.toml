@@ -1,7 +1,7 @@
 name = "OmniPackage"
 uuid = "992a9bcd-042f-40bc-a011-a3ea62fdd9b8"
-authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 version = "0.1.4"
+authors = ["Chris Elrod <elrodc@gmail.com> and contributors"]
 
 [deps]
 AbstractMCMC = "80f14c24-f653-4e6a-9b94-39d6b0f70001"
@@ -126,7 +126,7 @@ DiffResults = "1.0"
 DifferentialEquations = "7"
 DistributedArrays = "0.6"
 Distributions = "0.25.63"
-DocStringExtensions = "0.9"
+DocStringExtensions = "0.9, 0.10"
 EllipsisNotation = "= 1.7.0"
 ExponentialUtilities = "1.18"
 FFTW = "1"
